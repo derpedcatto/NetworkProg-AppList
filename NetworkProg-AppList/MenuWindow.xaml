@@ -1,0 +1,66 @@
+﻿<Window x:Class="NetworkProg_AppList.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:NetworkProg_AppList"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Menu"
+        Width="auto"
+        Height="auto"
+        FontSize="24"
+        FontWeight="Light"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        mc:Ignorable="d"
+        >
+    <StackPanel>
+        <!--  Button Color Notation Header  -->
+        <StackPanel Margin="10,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Padding" Value="20,5" />
+                </Style>
+            </StackPanel.Resources>
+
+            <Rectangle Width="30"
+                       Height="30"
+                       Margin="0,0,0,0"
+                       >
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="SeaGreen" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Padding="5,10"
+                       Text="= Example"
+                       />
+
+            <Rectangle Width="30"
+                       Height="30"
+                       Margin="30,0,10,0"
+                       >
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="CornflowerBlue" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Padding="0,10"
+                       Text="= Homework"
+                       />
+        </StackPanel>
+
+        <!--  Menu buttons  -->
+        <StackPanel Margin="10,0,10,10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Orientation="Vertical"
+                    >
+            <Button Click="ClientServerButton_Click"
+                    Content="Клиент-Серверная архитектура"
+                    Style="{StaticResource MainWindowMixedButton}"
+                    />
+        </StackPanel>
+    </StackPanel>
+</Window>

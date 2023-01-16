@@ -1,0 +1,82 @@
+﻿<Window x:Class="NetworkProg_AppList._1_Client_Server.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:NetworkProg_AppList._1_Client_Server.View"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Parameters"
+        Width="auto"
+        Height="auto"
+        FontSize="24"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        mc:Ignorable="d"
+        >
+    <Grid Margin="10,10"
+          ShowGridLines="False"
+          >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               Content="IP"
+               />
+        <TextBlock x:Name="IpTextBlock"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="127.0.0.1"
+                   />
+
+        <Label Grid.Row="1"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               Content="Port"
+               />
+        <TextBlock x:Name="PortTextBlock"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="8080"
+                   />
+
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Margin="0,0,10,0"
+               VerticalAlignment="Center"
+               Content="Encoding"
+               />
+        <TextBlock x:Name="EncodingTextBlock"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="UTF-8"
+                   />
+
+        <Button x:Name="StartServerButton"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Click="StartServerButton_Click"
+                Content="Start Server"
+                />
+        <Button x:Name="StartClientButton"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Click="StartClientButton_Click"
+                Content="Start Client"
+                />
+    </Grid>
+</Window>
