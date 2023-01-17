@@ -61,6 +61,10 @@
                     Content="Клиент-Серверная архитектура"
                     Style="{StaticResource MainWindowMixedButton}"
                     />
+            <Button Click="HTTPButton_Click"
+                    Content="Протокол HTTP"
+                    Style="{StaticResource MainWindowMixedButton}"
+                    />
         </StackPanel>
     </StackPanel>
 </Window>

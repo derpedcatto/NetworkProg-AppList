@@ -7,22 +7,20 @@ namespace NetworkProg_AppList
     /// </summary>
     public partial class MenuWindow : Window
     {
-        #region Constructor
-
         public MenuWindow()
         {
             InitializeComponent();
         }
 
-        #endregion
 
-        #region Events
-        
         private void ClientServerButton_Click(object sender, RoutedEventArgs e)
         {
             new _1_Client_Server.View.MainWindow().ShowDialog();
         }
 
-        #endregion
+        private void HTTPButton_Click(object sender, RoutedEventArgs e)
+        {
+            new _2_HTTP.View.ExchangeRateWindow().ShowDialog();
+        }
     }
 }
