@@ -22,5 +22,10 @@ namespace NetworkProg_AppList
         {
             new _2_HTTP.View.ExchangeRateWindow().ShowDialog();
         }
+
+        private void WebAPIButton_Click(object sender, RoutedEventArgs e)
+        {
+            new _3_WebAPI.View.WebAPIWindow().ShowDialog();
+        }
     }
 }

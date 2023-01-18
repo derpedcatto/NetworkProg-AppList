@@ -1,0 +1,100 @@
+﻿<Window x:Class="NetworkProg_AppList._3_WebAPI.View.WebAPIWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:NetworkProg_AppList._3_WebAPI.View"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Coin Chart"
+        Width="1100"
+        Height="600"
+        FontSize="16"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        >
+
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <EventSetter Event="MouseDoubleClick"
+                         Handler="ListViewItem_MouseDoubleClick"
+                         />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="0.13*" />
+        </Grid.RowDefinitions>
+
+        <!--  Coin list  -->
+        <ListView x:Name="CoinListView"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  ItemsSource="{Binding Assets}"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  >
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=symbol}"
+                                    Header="Symbol"
+                                    />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=id}"
+                                    Header="Id"
+                                    />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=priceUsd}"
+                                    Header="Price"
+                                    />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=supply}"
+                                    Header="Supply"
+                                    />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--  Clear previous chart Checkbox  -->
+        <CheckBox x:Name="ClearChartCheckBox"
+                  Grid.Row="1"
+                  Grid.Column="0"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Content="Clear previous chart"
+                  />
+
+        <!--  Separator  -->
+        <Border Grid.RowSpan="3"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="5"
+                />
+
+        <!--  Graph Canvas  -->
+        <Border Grid.Row="0"
+                Grid.Column="2"
+                Margin="20,20,20,0"
+                BorderBrush="SteelBlue"
+                BorderThickness="2"
+                >
+            <Canvas x:Name="GraphCanvas" />
+        </Border>
+
+        <!--  Chosen coins TextBlock  -->
+        <ScrollViewer Grid.Row="1"
+                      Grid.Column="3"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto"
+                      >
+            <TextBlock x:Name="DisplayedCoinsTextBlock"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       />
+        </ScrollViewer>
+    </Grid>
+</Window>

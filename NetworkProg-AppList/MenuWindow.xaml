@@ -65,6 +65,10 @@
                     Content="Протокол HTTP"
                     Style="{StaticResource MainWindowMixedButton}"
                     />
+            <Button Click="WebAPIButton_Click"
+                    Content="Web API"
+                    Style="{StaticResource MainWindowMixedButton}"
+                    />
         </StackPanel>
     </StackPanel>
 </Window>
