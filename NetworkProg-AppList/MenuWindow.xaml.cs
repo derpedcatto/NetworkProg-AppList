@@ -27,5 +27,10 @@ namespace NetworkProg_AppList
         {
             new _3_WebAPI.View.WebAPIWindow().ShowDialog();
         }
+
+        private void SMTPButton_Click(object sender, RoutedEventArgs e)
+        {
+            new _4_SMTP.View.SmtpWindow().ShowDialog();
+        }
     }
 }

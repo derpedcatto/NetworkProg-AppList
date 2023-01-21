@@ -69,6 +69,10 @@
                     Content="Web API"
                     Style="{StaticResource MainWindowMixedButton}"
                     />
+            <Button Click="SMTPButton_Click"
+                    Content="SMTP"
+                    Style="{StaticResource MainWindowMixedButton}"
+                    />
         </StackPanel>
     </StackPanel>
 </Window>
